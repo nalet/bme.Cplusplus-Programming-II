@@ -103,3 +103,8 @@
     United Arab Emirates: 1 billionaires. Richest is Abdulla bin Ahmad Al Ghurair with 5.9 B$
     United Kingdom: 14 billionaires. Richest is Hinduja family with 19.5 B$
     United States: 125 billionaires. Richest is Jeff Bezos with 112 B$
+
+
+## Output Ex3 ##
+
+![Screenshot of Ex3](Ex3/screenshot.png)

@@ -1,0 +1,25 @@
+void Widget::plotData()
+{
+    // S e t u s e r i n t e r a c t i o n : zoom and d r a g
+    ui->qcpwidget->setInteraction( QCP::iRangeDrag , true );
+    ui->qcpwidget->setInteraction( QCP::iRangeZoom , true );
+    connect( ui->qcpwidget , SIGNAL( mouseDoubleClick( QMouseEvent *)), ui->qcpwidget, SLOT(rescaleAxes())) ;
+
+    // Add Graph and s e t some p r o p e r t i e s
+    ui->qcpwidget->addGraph();
+    ui->qcpwidget->xAxis->setLabel("X" );
+    ui->qcpwidget->yAxis->setLabel("Y" );
+    ui->qcpwidget->xAxis->grid()->setSubGridVisible( true );
+    // C r e a t e d a t a : f ( x ) = x ^2
+    std::vector<double>X(101) ;
+    std::iota(X.begin(), X.end(), -50) ;
+    std::vector<double>Y(101);
+    std::transform( X.begin() ,X.end() ,
+                       Y.begin(),
+                       []( double x ) { return x * x ;}) ;
+    // Plot Data
+    ui->qcpwidget->graph(0)->setData( QVector<double>::fromStdVector(X), QVector<double>::fromStdVector(Y) ) ;
+    //
+    ui->qcpwidget->rescaleAxes();
+    ui->qcpwidget->replot();
+} 

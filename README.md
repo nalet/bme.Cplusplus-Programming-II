@@ -108,3 +108,21 @@
 ## Output Ex3 ##
 
 ![Screenshot of Ex3](Ex3/screenshot.png)
+
+## Output Ex4 ##
+
+    ///////////////////////////////////////////////////////////////
+    ///              BME - C++ II - EXERCISE 4                  ///
+    ///////////////////////////////////////////////////////////////
+
+    8 concurrent threads are supported.
+
+    ***************************************************************
+    ***                   Thread basics                         ***
+    ***************************************************************
+    finished Thread basics. Written data to threadLog.txt
+
+    ***************************************************************
+    ***                      Data Races                         ***
+    ***************************************************************
+    finished Data Races. Written data to threadSaveLog.txt

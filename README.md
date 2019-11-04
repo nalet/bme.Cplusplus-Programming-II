@@ -126,3 +126,66 @@
     ***                      Data Races                         ***
     ***************************************************************
     finished Data Races. Written data to threadSaveLog.txt
+
+## Output Ex5 ##
+
+    ///////////////////////////////////////////////////////////////
+    ///              BME - C++ II - EXERCISE 5                  ///
+    ///////////////////////////////////////////////////////////////
+
+
+    ***************************************************************
+    ***                Consumer/Producer Pattern                ***
+    ***************************************************************
+    Producing --> item 0
+    item 0 --> comsumed
+    Producing --> item 1
+    item 1 --> comsumed
+    Producing --> item 2
+    Producing --> item 3
+    item 2 --> comsumed
+    Producing --> item 4
+    item 3 --> comsumed
+    Producing --> item 5
+    Producing --> item 6
+    item 4 --> comsumed
+    Producing --> item 7
+    item 5 --> comsumed
+    Producing --> item 8
+    Producing --> item 9
+    item 6 --> comsumed
+    Producing --> item 10
+    item 7 --> comsumed
+    Producing --> item 11
+    Producing --> item 12
+    item 8 --> comsumed
+    Producing --> item 13
+    item 9 --> comsumed
+    Producing --> item 14
+    item 10 --> comsumed
+    Producing --> item 15
+    item 11 --> comsumed
+    Producing --> item 16
+    item 12 --> comsumed
+    Producing --> item 17
+    item 13 --> comsumed
+    Producing --> item 18
+    item 14 --> comsumed
+    Producing --> item 19
+    item 15 --> comsumed
+    Producing --> item 20
+    item 16 --> comsumed
+    Producing --> item 21
+    item 17 --> comsumed
+    Producing --> item 22
+    item 18 --> comsumed
+    Producing --> item 23
+    item 19 --> comsumed
+    Producing --> item 24
+    --- Producer done ----
+    item 20 --> comsumed
+    item 21 --> comsumed
+    item 22 --> comsumed
+    item 23 --> comsumed
+    item 24 --> comsumed
+    Finished!

@@ -1,0 +1,147 @@
+/*
+*
+* BFH COLORS:
+* Blue: #697d91
+* Yellow: #e7bd16
+*
+*/
+
+QDockWidget::title
+{
+    background: white;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #697d91;
+    height: 4px;
+    background: #697d91;
+    margin: 20px;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background: #d99100;
+    border: 1px solid #d99100;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0;
+    border-radius: 9px;
+}
+
+QSlider::groove:vertical {
+    border: 1px solid #697d91;
+    width: 4px;
+    background: #697d91;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+
+QSlider::handle:vertical {
+    background: #d99100;
+    border: 1px solid #d99100;
+    width: 16px;
+    height: 16px;
+    margin: 0 -8px;
+    border-radius: 9px;
+}
+
+QLabel
+{
+    border: 0;
+    color: #697d91;
+}
+
+QPushButton
+{
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color:  #697d91;
+    outline: 0px;
+    color: #697d91;
+}
+
+QPushButton::checked 
+{
+    background-color: #e7bd16; 
+}
+
+QPushButton::disabled
+{
+    background-color:  lightGray;    
+}
+
+QSpinBox
+{
+    color: #697d91;
+}
+
+QSpinBox::disabled
+{
+    background-color:  lightGray;    
+}
+
+QDoubleSpinBox
+{
+    color: #697d91;
+}
+
+QDoubleSpinBox::disabled
+{
+    background-color:  lightGray;    
+}
+
+
+QCheckBox::indicator::disabled
+{
+    background-color:  lightGray;    
+}
+
+QRadioButton
+{
+    color: #697d91;
+}#e7bd16
+
+QCheckBox
+{
+    color: #697d91;
+}
+
+QComboBox
+{
+    color: #697d91;
+}
+
+QGroupBox
+{
+    background-color: white;
+    color: #697d91;
+}
+
+QGridLayout
+{
+    background-color: white;
+    color: #697d91;
+}
+
+QComboBox
+{
+    background-color: white;
+    color: #697d91;
+}
+
+QProgressBar
+{
+    color: #697d91;
+    border: 1px solid #697d91;
+    height: 4px;
+    background: #697d91;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+QProgressBar::chunk
+{
+    background-color: #e7bd16;
+}

@@ -14,6 +14,7 @@
 // control should compile without including widget.h
 //#include "widget.h"
 #include "icontrol.h"
+#include "iVCamera.h"
 // ------------------------------------------------------------
 
 // Forward declarations
@@ -43,7 +44,7 @@ private:
     uint m_height;
     uint m_widht;
 
-    std::unique_ptr<VCamera> m_player;
+    std::unique_ptr<IVCamera> m_player;
     std::shared_ptr<DataBufferPool> m_dataPool;
 };
 #endif // CONTROL_H

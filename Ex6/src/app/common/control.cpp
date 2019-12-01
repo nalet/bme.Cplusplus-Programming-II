@@ -29,6 +29,7 @@ void Control::init()
     m_dataPool.reset(new DataBufferPool(m_height, m_widht));
 
     // create file reader
+    // we can only do that, when the factory pattern is implemented
     m_player.reset(new VCamera(this, m_dataPool));
 
     // Message

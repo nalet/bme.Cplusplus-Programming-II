@@ -6,8 +6,8 @@
 class IControl
 {
 public:
-    IControl() {}
-    virtual ~IControl() {}
+    IControl();
+    virtual ~IControl();
     virtual void displayMsg(std::string tag, std::string msg) = 0;
     virtual void setData(DataBufferPtr dataJunk) = 0;
 };

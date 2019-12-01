@@ -14,7 +14,7 @@
 // control should compile without including widget.h
 //#include "widget.h"
 #include "icontrol.h"
-#include "iVCamera.h"
+#include "ivcamera.h"
 // ------------------------------------------------------------
 
 // Forward declarations
@@ -29,7 +29,7 @@ public:
     ~Control() override;
 
     // TODO: Move to interface
-    void displayMsg(std::string tag, std::string msg) override;
+    void displayMsg(const std::string &tag, const std::string &msg) override;
     void setData(DataBufferPtr dataJunk) override;
     // ------------------------------------------------------------
 

@@ -5,13 +5,12 @@
 class IVCamera
 {
 public:
-    IVCamera();
-    virtual ~IVCamera();
+    virtual ~IVCamera() {} //this is essential
 
-    virtual void startPlayData();
-    virtual void stop();
-    virtual bool isPlaying();
-    virtual void setPlayRate(int playRate);
+    virtual void startPlayData() = 0;
+    virtual void stop() = 0;
+    virtual bool isPlaying() = 0;
+    virtual void setPlayRate(int playRate) = 0;
 };
 
 #endif // IVCAMERA_H

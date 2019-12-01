@@ -33,7 +33,7 @@ public:
     ~Widget() override;
 
     // TODO: Move to interface
-    void displayMsg(std::string tag, std::string msg) override;
+    void displayMsg(const std::string &tag, const std::string &msg) override;
     void setData(DataBufferPtr data) override;
     // ------------------------------------------------------------
 

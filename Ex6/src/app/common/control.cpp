@@ -5,8 +5,8 @@
 ** Contact:    Patrik Arnold ( patrik.arnold@bfh.ch )
 *****************************************************************************/
 #include "control.h"
-#include "VCamera.h"
 #include "dataBufferPool.h"
+#include "VCamera.h" //factory pattern not implemented yet
 
 Control::Control(IControl *parent) :
     m_widget(parent),
@@ -29,7 +29,6 @@ void Control::init()
     m_dataPool.reset(new DataBufferPool(m_height, m_widht));
 
     // create file reader
-    // we can only do that, when the factory pattern is implemented
     m_player.reset(new VCamera(this, m_dataPool));
 
     // Message
@@ -39,7 +38,7 @@ void Control::init()
 // -----------------------------------------------------------------
 // Functions called by Player (tight coupling)
 // -----------------------------------------------------------------
-void Control::displayMsg(std::string tag, std::string msg)
+void Control::displayMsg(const std::string &tag, const std::string &msg)
 {
     m_widget->displayMsg(tag, msg);
 }

@@ -10,10 +10,10 @@
 #include <thread>
 #include "dataBuffer.h"
 #include "icontrol.h"
-#include "iVCamera.h"
+#include "ivcamera.h"
 
 // Forward declarations
-class Control;
+class IControl;
 class DataBufferPool;
 
 /**

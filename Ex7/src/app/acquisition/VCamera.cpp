@@ -5,14 +5,14 @@
 ** Contact:    Patrik Arnold ( patrik.arnold@bfh.ch )
 *****************************************************************************/
 #include <chrono>
-#include "vrgbcamera.h"
+#include "VCamera.h"
 #include "dataBufferPool.h"
 
 // TODO: Remove compile time dependency
 #include "control.h"
 // ------------------------------------------------------------
 
-VRgbCamera::VRgbCamera(IControl *control, std::shared_ptr<DataBufferPool> dataPool) :
+VCamera::VCamera(IControl *control, std::shared_ptr<DataBufferPool> dataPool) :
     m_tag("Player"),
     m_play(false),
     m_control(control),
@@ -23,7 +23,7 @@ VRgbCamera::VRgbCamera(IControl *control, std::shared_ptr<DataBufferPool> dataPo
     m_control->displayMsg(m_tag, "Player constructed");
 }
 
-VRgbCamera::~VRgbCamera()
+VCamera::~VCamera()
 {
     // Thread stopping
     m_play = false;
@@ -34,31 +34,31 @@ VRgbCamera::~VRgbCamera()
     }
 }
 
-void VRgbCamera::startPlayData()
+void VCamera::startPlayData()
 {
     m_play = true;
-    m_acquireThread = std::thread(&VRgbCamera::run, this);
+    m_acquireThread = std::thread(&VCamera::run, this);
     m_control->displayMsg(m_tag, "Start Playing");
 }
 
-void VRgbCamera::stop()
+void VCamera::stop()
 {
     m_play = false;
     m_control->displayMsg(m_tag, "Stop playing");
 }
 
-bool VRgbCamera::isPlaying()
+bool VCamera::isPlaying()
 {
     return m_play;
 }
 
-void VRgbCamera::setPlayRate(int playRate)
+void VCamera::setPlayRate(int playRate)
 {
     m_playRate = playRate;
 }
 
 //******* Below runs in own thread **********//
-void VRgbCamera::run()
+void VCamera::run()
 {
     while(m_play)
     {
@@ -73,7 +73,7 @@ void VRgbCamera::run()
     }
 }
 
-bool VRgbCamera::readImage(DataBufferPtr data)
+bool VCamera::readImage(DataBufferPtr data)
 {
     int width = data->m_image.width();
     int height = data->m_image.height();
@@ -83,7 +83,7 @@ bool VRgbCamera::readImage(DataBufferPtr data)
         for(int x = 0; x < width; x++)
         {
             int val = x + offset;
-            data->m_image.setPixel(x, y, qRgb(val - 10, val, val + 10));
+            data->m_image.setPixel(x, y, qRgb(val, val, val));
         }
     }
     offset += 25;
